@@ -7,15 +7,17 @@ public class EnemyBehavior : MonoBehaviour
     private NavMeshAgent navMeshAgent;
     private GameObject player;
     private Animator animator;
+    private AudioSource audioSource;
 
-    // Normal ve algýlama durumunda dönüþ hýzý
     public float normalAngularSpeed = 120f;
     public float detectedAngularSpeed = 300f;
+    private bool hasPlayedSound = false; // Sesin bir kere çalmasý için kontrol
 
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player");
 
         if (!navMeshAgent.isOnNavMesh)
@@ -31,7 +33,6 @@ public class EnemyBehavior : MonoBehaviour
             }
         }
 
-        // Baþlangýçta normal dönüþ hýzýný ayarla
         navMeshAgent.angularSpeed = normalAngularSpeed;
     }
 
@@ -39,19 +40,25 @@ public class EnemyBehavior : MonoBehaviour
     {
         if (isDetected && navMeshAgent.isOnNavMesh)
         {
-            // Algýlandýysa kaçýþ yönünü ayarla ve hýzlý dönüþ hýzý kullan
             Vector3 directionAwayFromPlayer = transform.position - player.transform.position;
             Vector3 destination = transform.position + directionAwayFromPlayer;
             navMeshAgent.SetDestination(destination);
 
-            navMeshAgent.angularSpeed = detectedAngularSpeed;  // Hýzlý dönüþ
+            navMeshAgent.angularSpeed = detectedAngularSpeed;
+
+            // Ses çalma iþlemi, sadece bir kere çalsýn
+            if (!hasPlayedSound && audioSource != null)
+            {
+                audioSource.Play();
+                hasPlayedSound = true; // Sadece bir kere çalmasý için iþaretle
+            }
         }
         else
         {
-            navMeshAgent.angularSpeed = normalAngularSpeed;  // Normal dönüþ
+            navMeshAgent.angularSpeed = normalAngularSpeed;
+            hasPlayedSound = false; // isDetected false olduðunda resetleyerek sesin tekrar çalýnabilmesini saðlar
         }
 
-        // Animator parametresine NavMeshAgent'ýn hýzý atanýr
         float speed = navMeshAgent.velocity.magnitude;
         animator.SetFloat("Speed", speed);
     }

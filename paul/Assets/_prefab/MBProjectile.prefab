@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4240184236188617178}
   - component: {fileID: 7087189249385181266}
   - component: {fileID: 5862671898239846742}
+  - component: {fileID: 1737173515038045569}
   m_Layer: 0
   m_Name: MBProjectile
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +105,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 32.354168, y: 1.5458226, z: 1.4299469}
+  m_Center: {x: -0.107597105, y: 0.08484864, z: -0.05778694}
 --- !u!54 &5862671898239846742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -133,3 +134,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1737173515038045569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816094015574931193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a30ee6bee60b99b45ad493b2fcd5a8c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 500

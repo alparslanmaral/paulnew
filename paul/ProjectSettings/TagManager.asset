@@ -9,6 +9,7 @@ TagManager:
   - MB
   - Enemy
   - PickableObject
+  - Bullet
   layers:
   - Default
   - TransparentFX

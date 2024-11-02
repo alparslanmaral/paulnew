@@ -12,16 +12,22 @@ public class NPCai : MonoBehaviour
     private NavMeshAgent agent;
     private float idleTimer = 0f;
     private bool isIdle = false;
+    private Animator animator;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
         agent.speed = walkSpeed;
         WanderToNewLocation();
     }
 
     void Update()
     {
+        // Animator'a hýz deðerini geçir
+        float speed = agent.velocity.magnitude;
+        animator.SetFloat("Speed", speed);
+
         // Eðer NPC hedefe ulaþtýysa
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {

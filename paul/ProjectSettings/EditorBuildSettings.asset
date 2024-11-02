@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/BuyMenu.unity
+    guid: 5078e893a793f3a48b12a41bb311bbff
+  - enabled: 1
+    path: Assets/Scenes/Demo 1.unity
+    guid: 350b12fa1e9a1a343b94d3ebd22af664
+  - enabled: 1
+    path: Assets/Scenes/AnaMap.unity
+    guid: 93b317e2eca86b14db63ac77349a22d7
   m_configObjects: {}
