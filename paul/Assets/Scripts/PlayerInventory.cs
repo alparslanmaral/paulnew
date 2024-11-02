@@ -5,8 +5,10 @@ public class PlayerInventory : MonoBehaviour
 {
     public GameObject M1, M2, M3; // Canvas üzerindeki mermi görselleri
     public GameObject bulletPrefab; // Fýrlatýlacak mermi prefabý
+    public Transform bulletSpawnPoint; // Merminin çýkýþ yapacaðý nokta
     public float collectRange = 2.0f; // Mermiyi toplamak için gereken mesafe
     public int maxBullets = 3; // Maksimum mermi sayýsý
+    public float fireForce = 1000f; // Merminin fýrlatýlma kuvveti
 
     private int currentBullets = 0; // Mevcut mermi sayýsý
 
@@ -57,10 +59,10 @@ public class PlayerInventory : MonoBehaviour
     {
         currentBullets--; // Mermiyi envanterden çýkar
 
-        // Mermiyi oyuncunun baktýðý yöne doðru fýrlat
-        GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.identity);
+        // Mermiyi atýþ noktasýndan oyuncunun baktýðý yöne doðru fýrlat
+        GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Rigidbody rb = bullet.GetComponent<Rigidbody>();
-        rb.AddForce(transform.forward * 500); // Fýrlatma gücü
+        rb.AddForce(bulletSpawnPoint.forward * fireForce); // Belli bir kuvvetle ileriye doðru fýrlatma
 
         UpdateBulletImages(); // Görselleri güncelle
     }
