@@ -4,11 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - MB
   - Wall
   - NPC
-  - PickableObject
+  - MB
   - Enemy
+  - PickableObject
   layers:
   - Default
   - TransparentFX
