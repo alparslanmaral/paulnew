@@ -4437,6 +4437,16 @@ PrefabInstance:
       propertyPath: targetImage
       value: 
       objectReference: {fileID: 1033716547}
+    - target: {fileID: 4846115558456136053, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.093
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846115558456136053, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.28
+      objectReference: {fileID: 0}
     - target: {fileID: 7612729821444639312, guid: 598713cf573a02041bcb17532dde9e2a,
         type: 3}
       propertyPath: M1
@@ -4452,6 +4462,81 @@ PrefabInstance:
       propertyPath: M3
       value: 
       objectReference: {fileID: 361414646}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.atime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime0
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime1
+      value: 52814
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.ctime2
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.1091997
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.116197586
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.key2.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8276494851971067696, guid: 598713cf573a02041bcb17532dde9e2a,
+        type: 3}
+      propertyPath: m_Parameters.colorGradient.m_NumColorKeys
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8979829079239740803, guid: 598713cf573a02041bcb17532dde9e2a,
         type: 3}
       propertyPath: cooldownSlider
